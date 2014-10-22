@@ -1,0 +1,32 @@
+{
+	"name": "AdButler Extension",
+	"version": "0.1",
+	"manifest_version" : 2,
+	"description": "Provide Support for debugging AdButler tags",
+	"background" : {
+		"page" : "background.html"
+	},
+	"page_action" :
+	{
+		"default_icon": {
+			"19": "icons/19.png",
+			"38": "icons/38.png"
+		},
+		"default_title" : "AdButler",
+		"default_popup" : "fragments/popup.html"
+	},
+	"content_scripts": [
+	{
+		"matches": ["http://*/*"],
+		"js": ["lib/jquery-2.1.1.min.js","scripts/config.js","scripts/main.js"],
+        "css": ["adbutlerStyling.css"],
+		"run_at": "document_idle"
+	}
+	],
+	"icons": {
+		"16": "icons/16.png",
+		"48": "icons/48.png",
+		"128": "icons/128.png"
+	},
+	"options_page" : "fancy-settings/source/index.html"
+}

@@ -1,0 +1,73 @@
+
+.adbutlerTags {
+    z-index: 9999;
+    position: relative;
+    opacity: .2;
+}
+
+.adbutlerDebugging {
+    position: absolute;
+    top: 0px;
+    margin: 5px 10px 5px 10px;
+    padding: 5px 10px 5px 10px;
+    background-color: whitesmoke;
+}
+
+.adbutlerTags:hover {
+    opacity: 1.0;
+}
+
+/* Pulse Shrink */
+@-webkit-keyframes pulse-shrink {
+    to {
+        -webkit-transform: scale(0.95);
+        transform: scale(0.95);
+    }
+}
+
+@keyframes pulse-shrink {
+    to {
+        -webkit-transform: scale(0.95);
+        transform: scale(0.95);
+    }
+}
+
+.pulse-shrink:hover, .pulse-shrink:focus, .pulse-shrink:active {
+    display: inline-block;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    animation: none !important;
+    /*CSS transitions*/
+    -o-transition-property: none !important;
+    -moz-transition-property: none !important;
+    -ms-transition-property: none !important;
+    -webkit-transition-property: none !important;
+    transition-property: none !important;
+    /*CSS transforms*/
+    -o-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -webkit-transform: none !important;
+    transform: none !important;
+    /*CSS animations*/
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    -o-animation: none !important;
+    -ms-animation: none !important;
+    animation: none !important;
+
+}
+
+.pulse-shrink {
+    -webkit-animation-name: pulse-shrink;
+    animation-name: pulse-shrink;
+    -webkit-animation-duration: 0.8s;
+    animation-duration: 0.8s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
